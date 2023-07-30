@@ -19,7 +19,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = _s1 == _s2;
                 }
@@ -32,7 +32,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = _s1.Equals(_s2);
                 }
@@ -45,7 +45,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = System.Object.ReferenceEquals(_s1, _s2);
                 }
@@ -59,7 +59,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = _int1 == _int2;
                 }
@@ -72,7 +72,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = _int1.Equals(_int2);
                 }
@@ -85,7 +85,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = System.Object.ReferenceEquals(_int1, _int2);
                 }
@@ -99,7 +99,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = _int1.Equals(_s1);
                 }
@@ -112,7 +112,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = System.Object.ReferenceEquals(_int1, _s1);
                 }
@@ -128,7 +128,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = temp1 == temp2;
                 }
@@ -143,7 +143,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = temp1.Equals(temp2);
                 }
@@ -158,7 +158,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = System.Object.ReferenceEquals(temp1, temp2);
                 }

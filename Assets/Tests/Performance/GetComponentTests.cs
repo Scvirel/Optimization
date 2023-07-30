@@ -7,11 +7,11 @@ namespace Optimization.Tests.Performance
 {
     public sealed class GetComponentTests
     {
-        private GameObject m_testObject = default;
+        private GameObject _testObject = default;
 
         public GetComponentTests()
         {
-            m_testObject = new GameObject("TestObject");
+            _testObject = new GameObject("TestObject");
         }
 
         [Test, Performance]
@@ -21,9 +21,9 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
-                    result = m_testObject.GetComponent<Transform>();
+                    result = _testObject.GetComponent<Transform>();
                 }
             }).Run();
         }
@@ -34,9 +34,9 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
-                    result = (Transform)m_testObject.GetComponent("Transform");
+                    result = (Transform)_testObject.GetComponent("Transform");
                 }
             }).Run();
         }
@@ -47,9 +47,9 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
-                    result = m_testObject.GetComponent("Transform").transform;
+                    result = _testObject.GetComponent("Transform").transform;
                 }
             }).Run();
         }
@@ -60,9 +60,9 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
-                    result = (Transform)m_testObject.GetComponent(typeof(Transform));
+                    result = (Transform)_testObject.GetComponent(typeof(Transform));
                 }
             }).Run();
         }

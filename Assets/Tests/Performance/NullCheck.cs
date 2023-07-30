@@ -15,7 +15,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = TestObject == null;
                 }
@@ -28,7 +28,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = TestObject.Equals(null);
                 }
@@ -41,7 +41,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = System.Object.ReferenceEquals(TestObject, null);
                 }
@@ -54,7 +54,7 @@ namespace Optimization.Tests.Performance
 
             Measure.Method(() =>
             {
-                for (var i = 0; i < Constants.IterationCount; i++)
+                for (var i = 0; i < Constants.GeneralIterationCountMin; i++)
                 {
                     result = TestObject is null;
                 }

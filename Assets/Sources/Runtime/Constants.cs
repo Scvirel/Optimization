@@ -2,6 +2,7 @@
 {
     public static class Constants
     {
-        public const long IterationCount = 100000;
+        public const long GeneralIterationCountMin = 100000;
+        public const long IterationCountForLinqMin = 1000;
     }
 }
